@@ -1,0 +1,365 @@
+/*BAsic CSS Reset to remove default margin and padding */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+html{
+    scroll-behavior: smooth;
+}
+p{
+    color:rgb(85,85,85);
+}
+
+/*Desktop Navigation Bar Styling */
+#DesktopNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(181, 180, 180, 0.426);
+    margin: 18px 0px 0px 0px;
+    width: 100%;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding-right: 10px;
+}
+.nav-links li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+.logo{
+    padding-left: 10px;
+    font-size:2.5rem;
+    font-weight: 550;
+}
+a {
+text-decoration: none;
+   color: black;
+}
+#DesktopNav a:hover{
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+}
+/*SECTION*/
+/* About section container */
+#home {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  background: #f9fafb; /* subtle off-white background for the whole section */
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  background-color: #fffdfd;
+}
+
+/* Main container uses flex row for desktop */
+.profil-container-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 1100px;
+  width: 100%;
+  gap: 60px;
+  padding: 0;
+  margin: 0 20px;
+}
+
+/* Profile picture styling */
+.profile-pic {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px dotted transparent;
+  transition: border-color 0.9s ease;
+  cursor: default;
+}
+
+.profile-pic:hover {
+  border-color: #4f46e5; /* subtle color highlight on hover */
+}
+
+/* Text container used flex column for text content all vertically aligned */
+.text1 {
+  font-size: 1.3rem;
+  color: #4f46e5;
+  font-weight: 600;
+  letter-spacing: 2.2px;
+  margin-bottom: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.text2 {
+  font-size: 3.4rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.text3 {
+  font-size: 1.3rem;
+  color: #374151;
+  font-style: normal;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* Buttons aligned horizontally with space */
+.btn-container {
+  display: flex;
+  gap: 24px;
+  margin-top: 10px;
+}
+
+.btn1, .btn2 {
+  padding: 14px 38px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.btn1 {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.btn1:hover {
+  background-color: #3c3aed;
+}
+
+.btn2 {
+  background-color: transparent;
+  color: #4f46e5;
+  border: 2.5px solid #4f46e5;
+}
+
+.btn2:hover {
+  background-color: #4f46e5;
+  color: white;
+}
+
+/* Social icons container */
+.social-container {
+  margin-top: 30px;
+  display: flex;
+  gap: 32px;
+}
+
+.link-icon, .git-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.link-icon:hover, .git-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive for smaller screens */
+@media(max-width: 900px) {
+  .profil-container-1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .profile-pic {
+    width: 250px;
+    height: auto;
+  }
+  #Projects .progrid {
+    flex-direction: column;
+    align-items: center;
+  }
+  /* Reduce font sizes if necessary */
+  .text2 {
+    font-size: 2.6rem;
+  }
+  /* Make contact form width flexible */
+  .contact-form {
+    max-width: 90%;
+  }
+}
+
+
+#tablee {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow-x: auto;
+}
+
+#tablee thead {
+  background-color: #005f73; /* Dark teal */
+  color: white;
+}
+
+#tablee thead th {
+  padding: 10px 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid #005f73;
+}
+
+#tablee tbody tr:nth-child(even) {
+  background-color: #e0fbfc; /* Light teal */
+}
+
+#tablee tbody td {
+  padding: 12px 15px;
+  border: 1px solid #94d2bd;
+  font-size: 1rem;
+  color: #333;
+}
+
+#tablee tbody tr:hover {
+  background-color: #94d2bd; /* Hover effect */
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+
+/* Aboutme Section Styling */
+#about{
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+  align-items: center;
+  /* padding: 80px 20px; */
+ padding: 20px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  background-color: #fffefe;
+}
+
+.txt-2{
+   font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:500;
+  font-style: normal;
+}
+
+.txt-3{
+   font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:500;
+  font-style: normal;
+}
+.heading{
+  font-family: poppins, sans-serif;     
+  font-optical-sizing: auto;
+}
+.txt-1{
+  font-family: poppins, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 3.4rem;
+  margin-top:0px;
+  padding: 0px 20px 20px 20px;
+}
+#Skills{
+  width: 100%;
+  min-height: 50vh;
+  padding: 20px;
+  margin: 20px 0px;
+}
+ul li {
+  margin: 10px 0px;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  list-style: disc;
+  background-color: #dddcdc;
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 5px 10px 5px 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+.block-1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin: 20px auto;
+}
+.list{
+  list-style: disc;
+  padding: 00px 0px 0px 30px;
+}
+.contact{
+  background-color: #cc3434;
+  padding: 20px;
+}
+
+.contact-form{
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  gap: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #333;
+  margin: 20px auto;
+  justify-content: center;
+  align-items: center;
+  background-color: #b0b0acf9;
+  padding: 10px;
+  max-width: 50%;
+}
+#button{
+  border-radius: 10px;
+  padding: 5px 10px ;
+  color: #09090b;
+  background-color: #94d2bd;
+  box-shadow: none;
+  display : flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Projects{
+  padding: 10px;
+   flex-wrap: wrap;
+}
+.progrid{
+  display: flex;
+  justify-content: space-around;
+   flex-wrap: wrap;
+  flex-direction: row;
+}
+.linktxt{
+  color: #09090b;
+  font-size: smaller;
+  padding: 5px;
+}
+.linktxt:hover{
+  color: #b6b8b8;
+  cursor: pointer;
+}
